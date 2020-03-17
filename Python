@@ -1,0 +1,30 @@
+class Person:
+    'Common base class for all Person'
+    empCount = 0
+
+    def __init__(self, name, stack, mentorLearner, availableTime ):
+        self.name=name
+        self.stack=stack
+        self.mentorLearner = mentorLearner
+        self.availableTime = availableTime
+        Person.empCount += 1
+
+
+    def setMentorOrLearner(self,mentorLearner):
+        self.mentorLearner = mentorLearner
+
+    def setAvailableTime(self,availableTime):
+        self.availableTime = availableTime
+
+    def displayPerson(self):
+        print ("Name : ", self.name, ", Stack:",self.stack, ", Mentor/Learner: ",self.mentorLearner ,  ",Available time: ",self.availableTime, )
+
+
+emp1 = Person(input ("enter your name") ,input("enter your Interest") ,input("enter your Mentor/Leraner") ,input("Available time"))
+emp2= Person(input("enter your name") ,input("enter your Interest") ,input("enter your Mentor/Leraner"),input("Available time"))
+
+emp1.displayPerson()
+emp2.displayPerson()
+
+print ("Total Person %d" % Person.empCount)
+
